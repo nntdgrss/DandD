@@ -17,7 +17,7 @@ export default function MainPage() {
         </h1>
 
         <div className="h-1/2 w-[80%] p-4 flex flex-col items-center justify-center">
-          <div className="text-lg font-thin dark:text-zinc-300 text-zinc-900 w-1/3 flex flex-row items-center justify-around">
+          <div className="text-lg dark:text-zinc-300 text-zinc-900 w-1/3 flex flex-row items-center justify-around">
             <p
               className="underline underline-offset-4 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
               onClick={() => navigate("/create")}
