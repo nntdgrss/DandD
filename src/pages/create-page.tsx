@@ -17,20 +17,15 @@ import type z from "zod";
 
 export default function CreatePage() {
   return (
-    <div className="container mx-auto">
-      <div className="fixed top-5 right-5">
-        <ModeToggle />
-      </div>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-3xl select-none">
-          Create new{" "}
-          <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-            table
-          </span>
-        </p>
-        <div className="w-full max-w-xs mt-5">
-          <CreateNewTableForm />
-        </div>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <p className="text-3xl select-none">
+        Create new{" "}
+        <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+          table
+        </span>
+      </p>
+      <div className="w-full max-w-xs mt-5">
+        <CreateNewTableForm />
       </div>
     </div>
   );
