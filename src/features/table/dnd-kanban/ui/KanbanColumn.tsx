@@ -7,6 +7,7 @@ import {
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
+import { cn } from "@/lib/utils";
 
 // Пропсы для компонента колонки канбан-доски
 interface KanbanColumnProps {
@@ -50,15 +51,12 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
   return (
     <div
       ref={setNodeRef}
+      className={cn(
+        "w-[280px] min-h-[500px] flex flex-col bg-zinc-800 text-white rounded-md border-2",
+        isOverlay && "border-blue-500 border-dashed"
+      )}
       style={{
         ...style,
-        width: "280px",
-        minHeight: "500px",
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "#f4f5f7",
-        borderRadius: "8px",
-        border: isOverlay ? "2px dashed #4dabf7" : "1px solid #ddd",
         boxShadow: isOverlay
           ? "0 0 15px rgba(0, 0, 0, 0.2)"
           : "0 2px 5px rgba(0, 0, 0, 0.1)",
@@ -68,16 +66,7 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
       <div
         {...attributes}
         {...listeners}
-        className="column-header"
-        style={{
-          padding: "10px",
-          fontWeight: "bold",
-          borderBottom: "1px solid #ddd",
-          backgroundColor: "#e9ecef",
-          borderRadius: "8px 8px 0 0",
-          cursor: "grab",
-          userSelect: "none",
-        }}
+        className="p-[10px] font-bold border-b-2 border-zinc-700 select-none cursor-grab"
       >
         {column.title}
       </div>

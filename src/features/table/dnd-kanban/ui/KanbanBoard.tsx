@@ -7,17 +7,7 @@ interface KanbanBoardProps {
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ children }) => {
   return (
-    <div
-      className="kanban-board"
-      style={{
-        display: "flex",
-        gap: "1rem",
-        padding: "1rem",
-        overflowX: "auto",
-        width: "100%",
-        minHeight: "80vh",
-      }}
-    >
+    <div className="flex gap-4 p-4 overflow-x-auto w-full min-h-[80vh]">
       {children}
     </div>
   );
