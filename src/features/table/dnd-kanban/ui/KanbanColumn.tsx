@@ -52,7 +52,7 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
     <div
       ref={setNodeRef}
       className={cn(
-        "w-[280px] min-h-[500px] flex flex-col bg-zinc-800 text-white rounded-md border-2",
+        "w-[280px] min-h-[500px] flex flex-col dark:bg-zinc-900 text-white rounded-md border-2",
         isOverlay && "border-blue-500 border-dashed"
       )}
       style={{
@@ -66,7 +66,7 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
       <div
         {...attributes}
         {...listeners}
-        className="p-[10px] font-bold border-b-2 border-zinc-700 select-none cursor-grab"
+        className="p-[10px] font-bold border-b-2 dark:border-b-zinc-700 border-b-zinc-200 border-zinc-700 select-none cursor-grab dark:text-white text-black"
       >
         {column.title}
       </div>

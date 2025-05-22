@@ -25,7 +25,6 @@ import {
 import KanbanBoard from "@/features/table/dnd-kanban/ui/KanbanBoard";
 import KanbanColumn from "@/features/table/dnd-kanban/ui/KanbanColumn";
 import { KanbanItem } from "@/features/table/dnd-kanban/ui/KanbanItem";
-import { ChevronLeft } from "lucide-react";
 import TableHeader from "@/features/table/ui/TableHeader";
 // Начальные данные для колонок
 const initialColumns: Column[] = [

@@ -41,7 +41,7 @@ const KanbanItem: React.FC<KanbanItemProps> = ({ task, isOverlay }) => {
       {...attributes}
       {...listeners}
       className={cn(
-        "p-2.5 rounded-sm shadow-sm cursor-grab user-select-none dark:bg-zinc-800 dark:text-white text-black",
+        "p-2.5 rounded-sm shadow-sm cursor-grab user-select-none dark:bg-zinc-800 dark:text-white text-black bg-zinc-100",
         isOverlay && "dark:bg-zinc-700  border-blue-500 border-2 border-dashed"
       )}
       style={{

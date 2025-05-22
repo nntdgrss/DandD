@@ -1,4 +1,4 @@
-import { ChevronLeft, Pencil } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import type { Column } from "../dnd-kanban/types/types";
 import type { Task } from "../dnd-kanban/types/types";
 import { useNavigate } from "react-router";
