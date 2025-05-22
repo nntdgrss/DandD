@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { Column, Task } from "../types/types";
@@ -8,6 +8,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { cn } from "@/lib/utils";
+import { GripVertical, Trash2 } from "lucide-react";
 
 // Пропсы для компонента колонки канбан-доски
 interface KanbanColumnProps {
@@ -37,6 +38,7 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
       column,
     },
   });
+  const [columnName, setColumnName] = useState(column.title);
 
   // Стили для колонки при перетаскивании
   const style = {
@@ -63,12 +65,26 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
       }}
     >
       {/* Заголовок колонки, который можно перетаскивать */}
-      <div
-        {...attributes}
-        {...listeners}
-        className="p-[10px] font-bold border-b-2 dark:border-b-zinc-700 border-b-zinc-200 border-zinc-700 select-none cursor-grab dark:text-white text-black"
-      >
-        {column.title}
+      <div className="p-[10px] font-bold border-b-2 dark:border-b-zinc-700 border-b-zinc-200 border-zinc-700 select-none dark:text-white text-black flex items-center justify-between">
+        <div className="flex items-center">
+          <GripVertical
+            className="mr-2 outline-none cursor-grab"
+            size={20}
+            {...attributes}
+            {...listeners}
+          />
+          <input
+            type="text"
+            value={columnName}
+            maxLength={19}
+            onChange={(e) => setColumnName(e.target.value)}
+            className="outline-none"
+          />
+        </div>
+        <Trash2
+          size={20}
+          className="cursor-pointer text-zinc-500 hover:text-red-400 transition-colors duration-300"
+        />
       </div>
 
       {/* Контейнер для задач с вертикальной сортировкой */}
