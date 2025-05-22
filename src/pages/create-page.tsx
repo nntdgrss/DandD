@@ -10,6 +10,7 @@ import {
   FormDescription,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import TextGradient from "@/components/ui/text-gradient";
 import { createNewTableSchema } from "@/features/create-new-table/schemas/create-new.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -19,10 +20,7 @@ export default function CreatePage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <p className="text-3xl select-none">
-        Create new{" "}
-        <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-          table
-        </span>
+        Create new <TextGradient text="table" asChild />
       </p>
       <div className="w-full max-w-xs mt-5">
         <CreateNewTableForm />
