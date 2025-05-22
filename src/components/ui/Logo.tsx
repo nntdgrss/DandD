@@ -32,7 +32,7 @@ export default function Logo({ size = "md" }: ILogoProps) {
       </span>
       <span
         className={cn(
-          "bg-gradient-to-r from-red-400 to-red-600 text-white text-xl rounded-md px-1",
+          "bg-gradient-to-r from-pink-400 to-pink-600 text-white text-xl rounded-md px-1",
           size === "sm" && "text-sm",
           size === "md" && "text-xl",
           size === "lg" && "text-2xl"
